@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Animation</title>
+    <style>
+        body{
+            background-color: rgb(12, 72, 72);
+        }
+        .carbody{
+            width:500px;
+            height: 180px;
+            background-image: url(./body.png);
+            background-size: contain;
+            position: absolute;
+            bottom: 20px;
+
+        }
+        .wheel{
+            width: 85px;
+            height: 85px;
+            background-image: url(wheel.png);
+            background-size: contain;
+            animation: wheelAnimation 2.5s infinite linear;
+            animation-duration: 4s;
+            transition: all 0.5s ease-in-out;
+
+        }
+        #left{
+            position: absolute;
+            bottom: 0px;
+            left: 71px;
+
+        }
+        #rigth{
+            position: absolute;
+            bottom: 0px;
+            left: 360px;
+
+        }
+
+        .container{
+            width: 510px;
+            height: 190px;
+            position: absolute;
+            bottom: 0;
+            transform: translateX(-400px);
+            animation-name: carAnimation;
+            animation-duration: 30s;
+            animation-iteration-count: infinite;
+        }
+        
+        @keyframes carAnimation {
+            from{
+                transform: translateX(-400px);/*start*/
+            }
+            to{
+                transform: translateX(900px);/*end*/
+
+            }
+
+            
+        }
+
+        @keyframes wheelAnimation {
+            from{
+                transform: rotate(0deg);
+
+            }
+            to{
+                transform: rotate(360deg);
+            }
+
+            
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="carBody"></div>
+        <div class="wheel" id="left"></div>
+        <div class="wheel" id="right"></div>
+
+    </div>
+</body>
+</html>

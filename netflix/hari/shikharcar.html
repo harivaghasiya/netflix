@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Animation</title>
+    <style>
+        body{
+            background-color: aqua;
+
+        }
+        .carbody{
+            width: 500px;
+            height: 180px;
+            background-image: url(body.png);
+            background-size: contain;
+            position: absolute;
+            bottom: 20px;
+
+
+        }
+
+        .wheel{
+            width: 85px;
+            height: 85px;
+
+            background-image: url(wheel.png);
+            background-size: contain;
+            animation: wheelAinimation 2.5s infinite linear;
+            animation-duration: 4s;
+            transition: all 0.5s ease-in-out;
+
+        }
+        #left{
+            position: absolute;
+            bottom: 0px;
+            left: 71px;
+
+        }
+
+        #right{
+            position: absolute;
+            bottom: 0px;
+            left: 360px;
+
+        }
+
+        .container{
+            width: 510px;
+            height: 190px;
+            position: absolute;
+            bottom: 0;
+            transform: transla+teX(-400px);
+            animation-name: caranimation;
+            animation-duration: 30s;
+            animation-iteration-count:infinite;
+
+        }
+        @keyframes carAnimation {
+            from{
+                transform: translateX(-400px);
+
+            }
+            to{
+            transform: ;
+            }
+            
+        }
+
+    </style>
+</head>
+<body>
+    
+</body>
+</html>
+<div class="img2">  <img style="border-radius: 45px;" src="hari.jpg" alt="" height="100%" width="100%"></div>
